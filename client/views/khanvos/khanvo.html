@@ -4,4 +4,9 @@
 			{{> post_item}}
 		{{/each}}
 	</div>
+	{{#if currentUser}}
+		{{> postSubmit}}
+	{{else}}
+		<p>Can't post here, freakshow.</p>
+	{{/if}}
 </template>

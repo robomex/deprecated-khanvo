@@ -1,4 +1,4 @@
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .post, .comments li, .comment-form, .sidebar {
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
@@ -9,8 +9,7 @@ body {
 	background: #eee;
 	color: #666666;
 }
-.navbar { margin-bottom: 10px }
-.navbar .navbar-inner {
+.sidebar {
 	border-radius: 0px 0px 3px 3px;
 }
 #spinner { height: 300px }
