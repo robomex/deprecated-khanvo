@@ -3,7 +3,7 @@ Template.createKhanvo.events({
 		e.preventDefault();
 
 		var khanvo = {
-			khanvoName: $(e.target).find('[name=khanvoName]').val(),
+			name: $(e.target).find('[name=khanvoName]').val(),
 			description: $(e.target).find('[name=description]').val()
 		}
 
@@ -11,7 +11,7 @@ Template.createKhanvo.events({
 			if (error)
 				return alert(error.reason);
 
-		Router.go('khanvo', {_id: id});;
+		Router.go('khanvo', {_id: id});
 		});
 	}
 });

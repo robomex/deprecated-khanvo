@@ -8,7 +8,7 @@ Meteor.methods({
 		if (!user)
 			throw new Meteor.Error(401, 'You need to login to post, COMON');
 
-		if (!postAttributes.body)
+		if (!postAttributes.content)
 			throw new Meteor.Error(422, 'You gotta write something');
 
 		if (!khanvo)
@@ -19,6 +19,9 @@ Meteor.methods({
 			author: user.username,
 			submitted: new Date().getTime()
 		});
+
+		// create the post, save the id
+		post._id = Posts.insert(post);
 
 		return post._id;
 	}

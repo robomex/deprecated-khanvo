@@ -12,7 +12,7 @@ Template.postSubmit.events({
 			if (error) {
 				throwError(error.reason);
 			} else {
-				$body.val('');
+				$content.val('');
 			} 
 		});
 	}
