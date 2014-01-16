@@ -1,4 +1,4 @@
-template.sidebar.helpers({
+Template.sidebar.helpers({
 	khanvo: function() {
 		return Khanvos.find();
 	}

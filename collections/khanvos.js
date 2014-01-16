@@ -22,11 +22,24 @@ Meteor.methods({
 		var khanvo = _.extend(_.pick(khanvoAttributes, 'name', 'description'), {
 			userId: user._id,
 			creator: user.username,
-			submitted: new Date().getTime()
+			submitted: new Date().getTime(),
+			followers: []
 		});
 
 		var khanvoId = Khanvos.insert(khanvo);
 
 		return khanvoId;
+	},
+	follow: function(khanvoId) {
+		var user = Meteor.user();
+		// ensure the user is logged in
+		if (!user)
+			throw new Meteor.Error(401, 'You need to login to follow, fool');
+		Khanvos.update({
+			_id: khanvoId,
+			followers: {$ne: user._id}
+		}, {
+			$addToSet: {followers: user._id}
+		});
 	}
 });

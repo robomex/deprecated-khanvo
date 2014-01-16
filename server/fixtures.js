@@ -21,7 +21,7 @@ if (Posts.find().count() === 0) {
 	  content: 'i am robomex',
 	  //userId = robo._id,
 	  author: robo.profile.name,
-	  submitted: now - 17 * 3600 * 1000
+	  submitted: now - 47 * 3600 * 1000
 	});
 		
 	Posts.insert({
@@ -37,6 +37,6 @@ if (Posts.find().count() === 0) {
 	  content: 'stfu',
 	  //userId = knoz._id,
 	  author: knoz.profile.name,
-	  submitted: now - 47 * 3600 * 1000
+	  submitted: now - 17 * 3600 * 1000
 	});
 }

@@ -1,6 +1,9 @@
 <template name="layout">
 	<div class="container">
-		<div class="row">
+		<div class="row row-offcanvas row-offcanvas-right">
+			<p class="pull-right visible-sm visible-xs">
+            	<button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas"><span class="glyphicon glyphicon-cog"></span></button>
+          	</p>
 			{{> sidebar}}
 			<div class="col-xs-12 col-sm-9 col-md-8 well" id="main">
 				{{yield}}

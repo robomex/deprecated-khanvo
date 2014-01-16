@@ -1,5 +1,5 @@
 <template name="rightbar">
-	<div class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas well" role="navigation">
+	<div class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
       <div class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -11,10 +11,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-          	{{#if currentUser}}<li><a href="{{pathFor 'createKhanvo'}}">New</a></li>{{/if}}
+            </li>{{loginButtons}}</li>
           </ul>
           <ul class="nav navbar-nav">
-          	</li>{{loginButtons}}</li>
+          	{{#if currentUser}}<li><a href="{{pathFor 'createKhanvo'}}">New</a></li>{{/if}}
+            </li><strong>{{name}}</strong><a href="#" class="follow btn {{followedClass}}">⬆</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
