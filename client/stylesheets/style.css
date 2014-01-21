@@ -10,7 +10,6 @@ body {
 	color: #666666;
 }
 .sidebar {
-	border-radius: 0px 0px 3px 3px;
 }
 #spinner { height: 300px }
 .post {
@@ -114,7 +113,7 @@ footer {
  * Off Canvas
  * --------------------------------------------------
  */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
@@ -146,5 +145,4 @@ footer {
     width: 50%; /* 6 columns */
   }
 }
-
 /* End of Off-Canvas */

@@ -16,8 +16,8 @@ Template.rightbar.events({
 	}
 });
 
-$(document).ready(function() {
-  $('[data-toggle=offcanvas]').click(function() {
+Template.rightbar.rendered = function() {
+  $('[data-toggle=offcanvas]').on('click', function() {
     $('.row-offcanvas').toggleClass('active');
   });
-});
+};
