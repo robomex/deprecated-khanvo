@@ -1,10 +1,14 @@
 <template name="sidebar">	
 	<div class="col-xs-2 col-sm-3 col-md-2" role="navigation">	
-		<div class="sidebar list-group">
-			<a class="list-group-item active" href="{{pathFor 'khan'}}">Khanvo</a>			
-			{{#each khanvo}}
-				{{> khanvoList}}
-			{{/each}}
+		<div class="sidebar list-group navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li class="{{activeRouteClass}}">
+					<a class="list-group-item" href="{{pathFor 'khan'}}">Khanvo</a>
+				</li>			
+					{{#each khanvo}}
+						{{> khanvoList}}
+					{{/each}}
+			</ul>
 		</div>
 	</div>
 </template>

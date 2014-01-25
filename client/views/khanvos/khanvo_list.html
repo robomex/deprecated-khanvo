@@ -1,3 +1,5 @@
 <template name="khanvoList">
-	<a class="list-group-item" href="{{pathFor 'khanvo'}}">{{name}}</a>
+	<li class="{{activeRouteClass}}">
+		<a class="list-group-item" href="{{pathFor 'khanvo'}}">{{name}}</a>
+	</li>
 </template>
