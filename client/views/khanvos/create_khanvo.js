@@ -3,7 +3,7 @@ Template.createKhanvo.events({
 		e.preventDefault();
 
 		var khanvo = {
-			name: $(e.target).find('[name=khanvoName]').val(),
+			khanvoName: $(e.target).find('[name=khanvoName]').val(),
 			description: $(e.target).find('[name=description]').val()
 		}
 

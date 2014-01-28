@@ -3,23 +3,23 @@ Khanvos = new Meteor.Collection('khanvos');
 Meteor.methods({
 	khanvo: function(khanvoAttributes) {
 		var user = Meteor.user(),
-			khanvoWithSameName = Khanvos.findOne({name: khanvoAttributes.name});
+			khanvoWithSameName = Khanvos.findOne({khanvoName: khanvoAttributes.khanvoName});
 
 		// ensure the user is logged in
 		if (!user)
 			throw new Meteor.Error(401, "Goddammit, you need to login to create a new Khanvo");
 
 		// ensure the khanvo has a name
-		if (!khanvoAttributes.name)
+		if (!khanvoAttributes.khanvoName)
 			throw new Meteor.Error(422, "Your Khanvo needs a name, yo");
 
 		// check that there are no previous Khanvos with the same name
-		if (khanvoAttributes.name && khanvoWithSameName) {
+		if (khanvoAttributes.khanvoName && khanvoWithSameName) {
 			throw new Meteor.Error(302, 'This name has already been taken', khanvoWithSameName._id);
 		}
 
 		// pick out whitelisted keys
-		var khanvo = _.extend(_.pick(khanvoAttributes, 'name', 'description'), {
+		var khanvo = _.extend(_.pick(khanvoAttributes, 'khanvoName', 'description'), {
 			userId: user._id,
 			creator: user.username,
 			submitted: new Date().getTime(),

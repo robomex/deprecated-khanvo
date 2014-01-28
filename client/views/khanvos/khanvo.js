@@ -1,5 +1,5 @@
 Template.khanvo.helpers({
 	posts: function() {
-		return Posts.find({khanvoName: this.name});
+		return Posts.find();
 	}
 });

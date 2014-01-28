@@ -12,7 +12,7 @@ if (Posts.find().count() === 0) {
 	});
 	var knoz = Meteor.users.findOne(knozId);
 	var theYPId = Khanvos.insert({
-		name: 'TheYP',
+		khanvoName: 'TheYP',
 		description: 'we are not good people'
 	});
 
