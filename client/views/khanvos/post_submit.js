@@ -5,7 +5,7 @@ Template.postSubmit.events({
 		var $content = $(e.target).find('[name=content]');
 		var post = {
 			content: $content.val(),
-			khanvoId: template.data._id
+			khanvoName: template.data.name
 		};
 
 		Meteor.call('post', post, function(error, postId) {

@@ -1,6 +1,6 @@
 Meteor.publish('khanvos', function() {
 	return Khanvos.find();
 });
-Meteor.publish('posts', function(khanvoId) {
-	return Posts.find({khanvoId: khanvoId});
+Meteor.publish('posts', function(khanvoName) {
+	return Posts.find({khanvoName: khanvoName});
 });
