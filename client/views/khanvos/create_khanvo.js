@@ -14,7 +14,7 @@ Template.createKhanvo.events({
 				if (error.error === 302)
 					Router.go('khanvo', {_id: error.details})
 			} else {
-				Router.go('khanvo', {_id: id});
+				Router.go('khanvo', {khanvoName: khanvo.khanvoName});
 			}
 		});
 	}
