@@ -8,10 +8,14 @@ Template.createKhanvo.events({
 		}
 
 		Meteor.call('khanvo', khanvo, function(error, id) {
-			if (error)
-				return alert(error.reason);
-
-		Router.go('khanvo', {_id: id});
+			if (error) {
+				// display the error to the user
+				throwError(error.reason);
+				if (error.error === 302)
+					Router.go('khanvo', {_id: error.details})
+			} else {
+				Router.go('khanvo', {_id: id});
+			}
 		});
 	}
 });
