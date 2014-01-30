@@ -3,7 +3,7 @@ Posts = new Meteor.Collection('posts');
 Meteor.methods({
 	post: function(postAttributes) {
 		var user = Meteor.user();
-		var khanvo = Khanvos.findOne(postAttributes.khanvoName);
+		var khanvo = Khanvos.findOne({khanvoName: postAttributes.khanvoName});
 		// ensure the user is logged in
 		if (!user)
 			throw new Meteor.Error(401, 'You need to login to post, COMON');
