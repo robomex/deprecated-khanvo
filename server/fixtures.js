@@ -17,6 +17,7 @@ if (Posts.find().count() === 0) {
 	});
 
 	Posts.insert({
+	  khanvoId: theYPId,
 	  khanvoName: 'TheYP',
 	  content: 'i am robomex',
 	  //userId = robo._id,
@@ -25,6 +26,7 @@ if (Posts.find().count() === 0) {
 	});
 		
 	Posts.insert({
+	  khanvoId: theYPId,
 	  khanvoName: 'TheYP',
 	  content: 'and this is khanvo',
 	  //userId = robo._id,
@@ -33,6 +35,7 @@ if (Posts.find().count() === 0) {
 	});
 	
 	Posts.insert({
+	  khanvoId: theYPId,
 	  khanvoName: 'TheYP',
 	  content: 'stfu',
 	  //userId = knoz._id,
