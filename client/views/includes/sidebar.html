@@ -2,7 +2,7 @@
 	<div class="col-xs-2 col-sm-3 col-md-2" role="navigation">	
 		<div class="sidebar list-group navbar navbar-default">
 			<ul class="nav navbar-nav">
-				<li class="{{activeRouteClass}}">
+				<li class="{{activeRouteClass 'khan'}}">
 					<a class="list-group-item" href="{{pathFor 'khan'}}">Khanvo</a>
 				</li>			
 					{{#each khanvo}}
@@ -11,4 +11,10 @@
 			</ul>
 		</div>
 	</div>
+</template>
+
+<template name="khanvoList">
+	<li class="{{activeRouteClass 'khanvo'}}">
+		<a class="list-group-item" href="{{pathFor 'khanvo'}}">{{khanvoName}}</a>
+	</li>
 </template>
