@@ -19,8 +19,12 @@ Template.khanvoList.helpers({
 		args.pop();
 
 		var active = _.any(args, function(name) {
-			return Router.current().route.name === name
+			return Router.current().path.substring(1) === name
 		});
 		return active && 'active';
 	}
 });
+
+Handlebars.JavaScriptCompiler.prototype.lookupOnContext = function(name) {
+    this.push(this.nameLookup('depth' + this.lastContext, name, 'context') + ' || helpers.' + name);
+};
