@@ -6,7 +6,8 @@
       "spin": {},
       "bootstrap-3": {},
       "accounts-ui-bootstrap-dropdown": {},
-      "accounts-ui-bootstrap-3": {}
+      "accounts-ui-bootstrap-3": {},
+      "scss": {}
     },
     "packages": {
       "iron-router": {
@@ -21,8 +22,8 @@
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v0.3.7",
-        "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
+        "tag": "v3.1.0-1",
+        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
       },
       "accounts-ui-bootstrap-dropdown": {
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
@@ -33,6 +34,11 @@
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
         "tag": "v0.2.4",
         "commit": "cdbd20eb065310c0cc302bbd5f22e5b2121c769a"
+      },
+      "scss": {
+        "git": "https://github.com/fourseven/meteor-scss.git",
+        "tag": "v0.7.0",
+        "commit": "39f60d58c2b890bdd897ef52188644f3093fc2ac"
       }
     }
   }
