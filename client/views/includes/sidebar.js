@@ -25,6 +25,3 @@ Template.khanvoList.helpers({
 	}
 });
 
-Handlebars.JavaScriptCompiler.prototype.lookupOnContext = function(name) {
-    this.push(this.nameLookup('depth' + this.lastContext, name, 'context') + ' || helpers.' + name);
-};
