@@ -1,13 +1,13 @@
 <template name="sidebar">	
 	<div class="col-xs-2 col-sm-3 col-md-2" role="navigation">	
-		<div class="sidebar list-group navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li class="{{activeRouteClass 'khan'}}">
-					<a class="list-group-item" href="{{pathFor 'khan'}}">Khanvo</a>
+		<div class="sidebar">
+			<ul class="">
+				<li class="{{activeRouteClass 'khan'}} brand">
+					<a class="" href="{{pathFor 'khan'}}">Khanvo</a>
 				</li>			
-					{{#each khanvo}}
-						{{> khanvoList}}
-					{{/each}}
+				{{#each khanvo}}
+					{{> khanvoList}}
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -15,6 +15,6 @@
 
 <template name="khanvoList">
 	<li class="{{activeRouteClass khanvoName}}">
-		<a class="list-group-item" href="{{pathFor 'khanvo'}}">{{khanvoName}}</a>
+		<a class="" href="{{pathFor 'khanvo'}}">{{khanvoName}}</a>
 	</li>
 </template>

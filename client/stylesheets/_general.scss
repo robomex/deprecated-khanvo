@@ -19,6 +19,7 @@ body {
 	color: #666;
 	font: 100% $font-stack;
 }
+
 #spinner { height: 300px }
 
 .follow {
@@ -26,6 +27,54 @@ body {
 	margin: 7px 12px 0 0;
 	float: left;
 }
+
+.sidebar {
+	font-size: 17px;
+	letter-spacing: 0.8px;
+	transition: all .5s;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: #777;
+	display: block;
+	padding: 10px 15px;
+}
+
+.sidebar a:hover{
+	background-color: $primary-color + #333;
+	border-radius: 3px;
+}
+
+.sidebar ul .active{
+	background-color: $primary-color;
+}
+
+.sidebar ul .active a{
+	color: #fff;
+}
+
+.sidebar ul .active:after {
+   content:"";
+   top: -10px;
+   left: 100px;
+   position: relative;
+   width: 0;
+   height: 0;
+   border-top: 12px solid transparent;
+   border-left: 24px solid red;
+   border-bottom: 12px solid transparent;
+   z-index: 3;
+}
+
+
 .post {
 	.post-content { 
 		float: left;
