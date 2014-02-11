@@ -61,18 +61,19 @@ body {
 	color: #fff;
 }
 
-.sidebar ul .active:after {
-   content:"";
-   top: -10px;
-   left: 100px;
-   position: relative;
-   width: 0;
-   height: 0;
-   border-top: 12px solid transparent;
-   border-left: 24px solid red;
-   border-bottom: 12px solid transparent;
-   z-index: 3;
-}
+/*.sidebar ul .active:after, .sidebar ul .active::after {
+       position: relative;
+    left: 100%;
+    top: 50%;
+    margin-top: -50%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: solid 20px red;
+    border-top: solid 15px transparent;
+    border-bottom: solid 15px transparent;
+    z-index: 99;
+}*/
 
 
 .post {
