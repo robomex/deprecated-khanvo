@@ -1,4 +1,4 @@
-Notifications = new Meteor.collection('notifications');
+/*Notifications = new Meteor.collection('notifications');
 
 Notifications.allow({
 	update: ownsDocument
@@ -6,4 +6,4 @@ Notifications.allow({
 
 createPostNotification = function(post) {
 	var post = Posts.findOne(post.)
-}
+}*/
