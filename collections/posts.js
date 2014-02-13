@@ -1,4 +1,7 @@
 Posts = new Meteor.Collection('posts');
+Posts.allow({
+	remove: ownsDocument
+});
 
 Meteor.methods({
 	post: function(postAttributes) {
